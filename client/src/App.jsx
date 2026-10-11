@@ -15,6 +15,7 @@ import MarketPrices from "./pages/MarketPrices";
 import ExpertQA from "./pages/ExpertQA";
 import Profile from "./pages/Profile";
 import Bookmarks from "./pages/Bookmarks";
+import CropBudget from "./pages/CropBudget";
 
 // Pre-existing views (refactored to fit routes easily)
 import Dashboard from "./Dashboard";
@@ -176,6 +177,14 @@ export default function App() {
                         element={
                             <ProtectedRoute>
                                 <Dashboard onBack={() => navigate("/")} />
+                            </ProtectedRoute>
+                        } 
+                    />
+                    <Route 
+                        path="/budget" 
+                        element={
+                            <ProtectedRoute>
+                                <CropBudget />
                             </ProtectedRoute>
                         } 
                     />

@@ -2042,6 +2042,19 @@ export default function Dashboard({ onBack }) {
                                         <span>🤖</span>
                                         <span>AI Crop Suitability</span>
                                     </button>
+                                    <button
+                                        className="dash-btn secondary"
+                                        onClick={() => {
+                                            const params = new URLSearchParams();
+                                            if (calculatedArea) params.set("area", calculatedArea.toFixed(2));
+                                            if (selectedLand?.soilType) params.set("soilType", selectedLand.soilType);
+                                            window.location.href = `/budget${params.toString() ? '?' + params.toString() : ''}`;
+                                        }}
+                                        title="Calculate crop production costs and break-even yield"
+                                    >
+                                        <span>💰</span>
+                                        <span>Crop Budget & Break-Even</span>
+                                    </button>
                                 </div>
                             </div>
                         </div>

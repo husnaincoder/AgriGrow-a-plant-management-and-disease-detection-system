@@ -66,6 +66,7 @@ export default function Navbar({ modelReady, loadingStatus, isOnline, installPro
                             <Link to="/market">{t("nav.market")}</Link>
                             <Link to="/qa">{t("nav.qa")}</Link>
                             <Link to="/community">{t("nav.community")}</Link>
+                            <Link to="/budget">{t("nav.budget") || "Crop Budget"}</Link>
                         </>
                     ) : (
                         <>
@@ -74,6 +75,7 @@ export default function Navbar({ modelReady, loadingStatus, isOnline, installPro
                             <Link to="/market" className="nav-link-locked" title="Login to view Market Prices">{t("nav.market")} <span className="nav-lock-icon">🔒</span></Link>
                             <Link to="/qa" className="nav-link-locked" title="Login to view Expert Q&A">{t("nav.qa")} <span className="nav-lock-icon">🔒</span></Link>
                             <Link to="/community" className="nav-link-locked" title="Login to view Community">{t("nav.community")} <span className="nav-lock-icon">🔒</span></Link>
+                            <Link to="/budget" className="nav-link-locked" title="Login to view Crop Budget">{t("nav.budget") || "Crop Budget"} <span className="nav-lock-icon">🔒</span></Link>
                         </>
                     )}
                 </div>
@@ -215,6 +217,10 @@ export default function Navbar({ modelReady, loadingStatus, isOnline, installPro
                                     <span className="drawer-icon">👥</span>
                                     <span className="drawer-text">{t("nav.community")}</span>
                                 </Link>
+                                <Link to="/budget" onClick={() => setMobileMenuOpen(false)} className="drawer-link">
+                                    <span className="drawer-icon">💰</span>
+                                    <span className="drawer-text">{t("nav.budget") || "Crop Budget"}</span>
+                                </Link>
                                 {["superadmin", "admin", "editor"].includes(user?.role) && (
                                     <Link to="/admin" onClick={() => setMobileMenuOpen(false)} className="drawer-link nav-admin-link">
                                         <span className="drawer-icon">⚙️</span>
@@ -243,6 +249,10 @@ export default function Navbar({ modelReady, loadingStatus, isOnline, installPro
                                 <Link to="/community" onClick={() => setMobileMenuOpen(false)} className="drawer-link nav-link-locked">
                                     <span className="drawer-icon">👥</span>
                                     <span className="drawer-text">{t("nav.community")} 🔒</span>
+                                </Link>
+                                <Link to="/budget" onClick={() => setMobileMenuOpen(false)} className="drawer-link nav-link-locked">
+                                    <span className="drawer-icon">💰</span>
+                                    <span className="drawer-text">{t("nav.budget") || "Crop Budget"} 🔒</span>
                                 </Link>
                             </>
                         )}
