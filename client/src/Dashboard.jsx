@@ -1744,11 +1744,11 @@ export default function Dashboard({ onBack }) {
                     )}
                 </div>
 
-                {/* Small floating toggle button to open options when closed */}
+                {/* Small floating toggle button to open options when closed (desktop only) */}
                 {!panelOpen && (
                     <button
                         type="button"
-                        className="dash-floating-options-toggle"
+                        className="dash-floating-options-toggle dash-desktop-only"
                         onClick={() => {
                             setPanelOpen(true);
                             setPanelHeight(null);
