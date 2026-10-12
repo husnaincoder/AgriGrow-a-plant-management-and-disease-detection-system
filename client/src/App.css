@@ -934,6 +934,85 @@
     font-weight: 600;
 }
 
+/* ── Custom Small Dashboard Footer (Desktop & Global) ──────── */
+.landing-footer.dashboard-footer {
+    margin: 4px auto 6px !important;
+    padding: 5px 18px !important;
+    width: fit-content !important;
+    max-width: 92vw !important;
+    min-height: 0 !important;
+    height: auto !important;
+    border-radius: 999px !important;
+    background: rgba(10, 15, 26, 0.88) !important;
+    backdrop-filter: blur(16px) !important;
+    -webkit-backdrop-filter: blur(16px) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.45) !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    flex-shrink: 0 !important;
+    z-index: 50 !important;
+}
+
+.landing-footer.dashboard-footer .footer-content {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 10px 14px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    line-height: 1 !important;
+    white-space: nowrap !important;
+    text-align: center !important;
+}
+
+.landing-footer.dashboard-footer .footer-logo {
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 5px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.landing-footer.dashboard-footer .footer-logo .logo-icon {
+    font-size: 13px !important;
+    line-height: 1 !important;
+}
+
+.landing-footer.dashboard-footer .footer-logo h3,
+.landing-footer.dashboard-footer .footer-logo .footer-brand {
+    font-size: 12px !important;
+    font-weight: 700 !important;
+    color: #10b981 !important;
+    margin: 0 !important;
+    line-height: 1 !important;
+}
+
+.landing-footer.dashboard-footer .footer-tech-note {
+    font-size: 11px !important;
+    color: #94a3b8 !important;
+    margin: 0 !important;
+    line-height: 1 !important;
+}
+
+.landing-footer.dashboard-footer .footer-tagline {
+    font-size: 11px !important;
+    color: #64748b !important;
+    margin: 0 !important;
+    line-height: 1 !important;
+    border-left: 1px solid rgba(255, 255, 255, 0.15) !important;
+    padding-left: 10px !important;
+}
+
+.landing-footer.dashboard-footer .footer-offline-badge {
+    font-size: 10px !important;
+    padding: 1px 7px !important;
+    margin: 0 !important;
+    line-height: 1.4 !important;
+}
+
 /* Responsive Adjustments */
 @media (max-width: 900px) {
     .landing-footer {
@@ -955,32 +1034,23 @@
 
     /* Ultra-compact dashboard footer on mobile */
     .landing-footer.dashboard-footer {
-        padding: 4px 10px;
-        margin: 4px 6px 6px;
-        border-radius: 8px;
+        padding: 3px 10px !important;
+        margin: 3px auto !important;
+        border-radius: 999px !important;
     }
 
     .landing-footer.dashboard-footer .footer-content {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-wrap: wrap;
-        gap: 6px 10px;
+        gap: 6px 8px !important;
     }
 
-    .landing-footer.dashboard-footer .footer-logo {
-        margin-bottom: 0;
-        gap: 4px;
-    }
-
-    .landing-footer.dashboard-footer .footer-logo .logo-icon { font-size: 12px; }
-    .landing-footer.dashboard-footer .footer-logo .footer-brand { font-size: 11.5px; }
-    .landing-footer.dashboard-footer .footer-tech-note { font-size: 10px; margin: 0; }
-    .landing-footer.dashboard-footer .footer-tagline { display: none; }
+    .landing-footer.dashboard-footer .footer-logo .logo-icon { font-size: 12px !important; }
+    .landing-footer.dashboard-footer .footer-logo .footer-brand { font-size: 11px !important; }
+    .landing-footer.dashboard-footer .footer-tech-note { font-size: 10px !important; margin: 0 !important; }
+    .landing-footer.dashboard-footer .footer-tagline { display: none !important; }
     .landing-footer.dashboard-footer .footer-offline-badge {
-        font-size: 10px;
-        padding: 1px 6px;
-        margin-top: 0;
+        font-size: 9.5px !important;
+        padding: 1px 6px !important;
+        margin-top: 0 !important;
     }
 }
 

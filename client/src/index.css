@@ -67,6 +67,11 @@ h1, h2, h3, h4, h5, h6 {
     padding: 18px 24px;
 }
 
+.landing-footer.dashboard-footer {
+    margin: 4px auto 6px !important;
+    padding: 5px 18px !important;
+}
+
 @media (max-width: 900px) {
     .landing-footer {
         margin: 6px 8px 8px;
@@ -74,8 +79,8 @@ h1, h2, h3, h4, h5, h6 {
     }
 
     .landing-footer.dashboard-footer {
-        margin: 4px 6px 6px;
-        padding: 4px 10px;
+        margin: 3px auto !important;
+        padding: 3px 10px !important;
     }
 }
 
