@@ -2025,37 +2025,6 @@ export default function Dashboard({ onBack }) {
                                     </div>
                                 )}
 
-                                {/* Action Buttons */}
-                                <div className="dash-land-actions">
-                                    {!drawingMode ? (
-                                        <button className="dash-btn outline" onClick={startDrawing}>
-                                            <span>✏️</span>
-                                            <span>{activeField ? "Draw New Boundary" : (drawingPoints.length >= 3 ? "Redraw Boundary" : "Draw Land Boundary")}</span>
-                                        </button>
-                                    ) : (
-                                        <button className="dash-btn outline" onClick={cancelDrawing}>
-                                            <span>✕</span>
-                                            <span>Cancel Drawing</span>
-                                        </button>
-                                    )}
-                                    <button className="dash-btn secondary" onClick={() => setPanelTab("ai")}>
-                                        <span>🤖</span>
-                                        <span>AI Crop Suitability</span>
-                                    </button>
-                                    <button
-                                        className="dash-btn secondary"
-                                        onClick={() => {
-                                            const params = new URLSearchParams();
-                                            if (calculatedArea) params.set("area", calculatedArea.toFixed(2));
-                                            if (selectedLand?.soilType) params.set("soilType", selectedLand.soilType);
-                                            window.location.href = `/budget${params.toString() ? '?' + params.toString() : ''}`;
-                                        }}
-                                        title="Calculate crop production costs and break-even yield"
-                                    >
-                                        <span>💰</span>
-                                        <span>Crop Budget & Break-Even</span>
-                                    </button>
-                                </div>
                             </div>
                         </div>
                     )}
@@ -2259,7 +2228,7 @@ export default function Dashboard({ onBack }) {
                                             
                                             {/* Transition to Diseases */}
                                             {!aiDiseases && !loadingDiseases && (
-                                                <button className="dash-btn primary full-width" style={{ marginTop: '16px' }} onClick={() => runTabAnalysis('diseases')}>
+                                                <button className="dash-btn primary full-width" style={{ marginTop: '16px', marginBottom: '14px' }} onClick={() => runTabAnalysis('diseases')}>
                                                     Next: Analyze Disease Risks 🛡️
                                                 </button>
                                             )}
@@ -2276,7 +2245,7 @@ export default function Dashboard({ onBack }) {
                                             
                                             {/* Transition to Tips */}
                                             {!aiTips && !loadingTips && (
-                                                <button className="dash-btn primary full-width" style={{ marginTop: '16px' }} onClick={() => runTabAnalysis('tips')}>
+                                                <button className="dash-btn primary full-width" style={{ marginTop: '16px', marginBottom: '14px' }} onClick={() => runTabAnalysis('tips')}>
                                                     Next: View Weather Tips & Season Planning 🌤️
                                                 </button>
                                             )}
